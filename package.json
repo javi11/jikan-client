@@ -56,8 +56,8 @@
   "name": "mal-client",
   "scripts": {
     "release": "np",
-    "lint": "eslint '*/**/*.{ts,tsx}' ",
-    "postinstall": "npm run compile",
+    "lint": "eslint '*/**/*.{ts,tsx}'",
+    "prepublish": "npm run compile",
     "compile": "rm -rf dist && tsc --build tsconfig.json"
   },
   "types": "dist/index.d.ts",
