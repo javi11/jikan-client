@@ -1,14 +1,7 @@
 import LRU from 'quick-lru';
-import mem = require('mem');
 
 export interface Settings {
-  cache: mem.CacheStorage<
-    unknown,
-    {
-      data: unknown;
-      maxAge: number;
-    }
-  >;
+  cache: any;
 }
 
 let settings: Settings = {

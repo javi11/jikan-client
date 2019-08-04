@@ -17,7 +17,7 @@ const get = async (id: number, page: number = 1) => {
   ow(id, ow.number.positive);
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/producer/${id}/${page}`, {}));
+  const { body } = await queue.add(async () => api(`/producer/${id}/${page}`, {}));
 
   return body as Producer;
 };

@@ -52,10 +52,10 @@ interface MangaElement {
 }
 
 enum MangaType {
-  Doujinshi = "Doujinshi",
-  Manga = "Manga",
-  Manhwa = "Manhwa",
-  Novel = "Novel"
+  Doujinshi = 'Doujinshi',
+  Manga = 'Manga',
+  Manhwa = 'Manhwa',
+  Novel = 'Novel'
 }
 
 interface MalURL {
@@ -66,22 +66,22 @@ interface MalURL {
 }
 
 enum MalURLType {
-  Anime = "anime"
+  Anime = 'anime'
 }
 
 enum Source {
-  Empty = "-",
-  Manga = "Manga",
-  Novel = "Novel",
-  The4KomaManga = "4-koma manga",
-  VisualNovel = "Visual novel",
-  WebManga = "Web manga"
+  Empty = '-',
+  Manga = 'Manga',
+  Novel = 'Novel',
+  The4KomaManga = '4-koma manga',
+  VisualNovel = 'Visual novel',
+  WebManga = 'Web manga'
 }
 
 enum AnimeType {
-  Movie = "Movie",
-  Ona = "ONA",
-  Ova = "OVA",
-  Special = "Special",
-  Tv = "TV"
+  Movie = 'Movie',
+  Ona = 'ONA',
+  Ova = 'OVA',
+  Special = 'Special',
+  Tv = 'TV'
 }

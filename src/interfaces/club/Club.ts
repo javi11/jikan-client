@@ -38,8 +38,8 @@ interface Relation {
 }
 
 enum Type {
-  Anime = "anime",
-  Character = "character",
-  Manga = "manga",
-  Profile = "profile"
+  Anime = 'anime',
+  Character = 'character',
+  Manga = 'manga',
+  Profile = 'profile'
 }

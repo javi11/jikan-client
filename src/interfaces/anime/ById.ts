@@ -63,12 +63,12 @@ interface Genre {
 }
 
 enum Type {
-  Anime = "anime",
-  Manga = "manga"
+  Anime = 'anime',
+  Manga = 'manga'
 }
 
 interface Related {
   readonly Adaptation: Genre[];
-  readonly "Side story": Genre[];
+  readonly 'Side story': Genre[];
   readonly Summary: Genre[];
 }

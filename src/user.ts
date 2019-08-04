@@ -21,8 +21,8 @@ import { realTimeapi, queue } from './utils';
 const animeList = async (username: string, type: AnimeListTypes = 'all', page: number = 1) => {
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(
-    async () => await realTimeapi(`/user/${username}/animelist/${type}/${page}`, {})
+  const { body } = await queue.add(async () =>
+    realTimeapi(`/user/${username}/animelist/${type}/${page}`, {})
   );
 
   return body as AnimeList;
@@ -37,8 +37,8 @@ const animeList = async (username: string, type: AnimeListTypes = 'all', page: n
 const friends = async (username: string, page: number = 1) => {
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(
-    async () => await realTimeapi(`/user/${username}/friends/${page}`, {})
+  const { body } = await queue.add(async () =>
+    realTimeapi(`/user/${username}/friends/${page}`, {})
   );
 
   return body as Friends;
@@ -52,26 +52,24 @@ const friends = async (username: string, page: number = 1) => {
  */
 const history = async (username: string, type: Types = 'both') => {
   if (type === 'anime') {
-    const anime = await queue.add(
-      async () => await realTimeapi(`/user/${username}/history/anime`, {})
-    );
+    const anime = await queue.add(async () => realTimeapi(`/user/${username}/history/anime`, {}));
 
     return anime.body as History;
   }
 
   if (type === 'both') {
-    const both = await queue.add(async () => await realTimeapi(`/user/${username}/history`, {}));
+    const both = await queue.add(async () => realTimeapi(`/user/${username}/history`, {}));
 
     return both.body as History;
   }
 
   if (type === 'manga') {
-    const manga = await queue.add(
-      async () => await realTimeapi(`/user/${username}/history/manga`, {})
-    );
+    const manga = await queue.add(async () => realTimeapi(`/user/${username}/history/manga`, {}));
 
     return manga.body as History;
   }
+
+  throw new Error('Invalid type.');
 };
 
 /**
@@ -84,8 +82,8 @@ const history = async (username: string, type: Types = 'both') => {
 const mangaList = async (username: string, type: MangaListTypes = 'all', page: number = 1) => {
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(
-    async () => await realTimeapi(`/user/${username}/mangalist/${type}/${page}`, {})
+  const { body } = await queue.add(async () =>
+    realTimeapi(`/user/${username}/mangalist/${type}/${page}`, {})
   );
 
   return body as MangaList;
@@ -97,7 +95,7 @@ const mangaList = async (username: string, type: MangaListTypes = 'all', page: n
  * @param username - Username on MyAnimeList
  */
 const profile = async (username: string) => {
-  const { body } = await queue.add(async () => await realTimeapi(`/user/${username}`, {}));
+  const { body } = await queue.add(async () => realTimeapi(`/user/${username}`, {}));
 
   return body as Profile;
 };

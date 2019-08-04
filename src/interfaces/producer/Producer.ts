@@ -33,24 +33,24 @@ interface Meta {
 }
 
 enum MetaType {
-  Anime = "anime"
+  Anime = 'anime'
 }
 
 enum Source {
-  Empty = "-",
-  Game = "Game",
-  LightNovel = "Light novel",
-  Manga = "Manga",
-  Novel = "Novel",
-  Original = "Original",
-  The4KomaManga = "4-koma manga",
-  WebManga = "Web manga"
+  Empty = '-',
+  Game = 'Game',
+  LightNovel = 'Light novel',
+  Manga = 'Manga',
+  Novel = 'Novel',
+  Original = 'Original',
+  The4KomaManga = '4-koma manga',
+  WebManga = 'Web manga'
 }
 
 enum AnimeType {
-  Movie = "Movie",
-  Ona = "ONA",
-  Ova = "OVA",
-  Special = "Special",
-  Tv = "TV"
+  Movie = 'Movie',
+  Ona = 'ONA',
+  Ova = 'OVA',
+  Special = 'Special',
+  Tv = 'TV'
 }

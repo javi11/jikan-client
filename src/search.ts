@@ -24,6 +24,7 @@ const search = async (query: string, type: SearchTypes, page: number = 1, filter
 
   if (filters) {
     if (filters.end_date) {
+      // eslint-disable-next-line no-param-reassign
       filters.end_date = new Date(filters.end_date).toISOString();
     }
 
@@ -41,6 +42,7 @@ const search = async (query: string, type: SearchTypes, page: number = 1, filter
     }
 
     if (filters.start_date) {
+      // eslint-disable-next-line no-param-reassign
       filters.start_date = new Date(filters.start_date).toISOString();
     }
 
@@ -49,7 +51,7 @@ const search = async (query: string, type: SearchTypes, page: number = 1, filter
     });
   }
 
-  const { body } = await queue.add(async () => await searchApi(url.href, {}));
+  const { body } = await queue.add(async () => searchApi(url.href, {}));
 
   return body as Search;
 };

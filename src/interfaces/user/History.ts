@@ -5,7 +5,7 @@ export interface History {
   readonly request_hash: string;
 }
 
-export type Types = "anime" | "both" | "manga";
+export type Types = 'anime' | 'both' | 'manga';
 
 interface HistoryElement {
   readonly date: Date;

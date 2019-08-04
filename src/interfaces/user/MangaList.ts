@@ -1,11 +1,11 @@
 export type MangaListTypes =
-  | "all"
-  | "completed"
-  | "dropped"
-  | "onhold"
-  | "plantoread"
-  | "ptr"
-  | "reading";
+  | 'all'
+  | 'completed'
+  | 'dropped'
+  | 'onhold'
+  | 'plantoread'
+  | 'ptr'
+  | 'reading';
 
 export interface MangaList {
   readonly manga: Manga[];
@@ -41,15 +41,15 @@ interface Manga {
 }
 
 enum Priority {
-  High = "High",
-  Low = "Low",
-  Medium = "Medium"
+  High = 'High',
+  Low = 'Low',
+  Medium = 'Medium'
 }
 
 enum Type {
-  Doujinshi = "Doujinshi",
-  Manga = "Manga",
-  Manhua = "Manhua",
-  Manhwa = "Manhwa",
-  OneShot = "One-shot"
+  Doujinshi = 'Doujinshi',
+  Manga = 'Manga',
+  Manhua = 'Manhua',
+  Manhwa = 'Manhwa',
+  OneShot = 'One-shot'
 }

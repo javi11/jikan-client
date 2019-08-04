@@ -8,7 +8,7 @@ import { api, queue } from './utils';
  * Fetches anime schedule of the week or specified day
  */
 const anime = async (day: Days = 'monday') => {
-  const { body } = await queue.add(async () => await api(`/schedule/${day}`, {}));
+  const { body } = await queue.add(async () => api(`/schedule/${day}`, {}));
 
   return body as Schedule;
 };

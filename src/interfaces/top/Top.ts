@@ -20,25 +20,25 @@ interface Top {
 }
 
 enum Type {
-  Doujinshi = "Doujinshi",
-  Manga = "Manga",
-  Novel = "Novel"
+  Doujinshi = 'Doujinshi',
+  Manga = 'Manga',
+  Novel = 'Novel'
 }
 
 export type SubTypes =
-  | "airing"
-  | "bypopularity"
-  | "doujin"
-  | "favorite"
-  | "manga"
-  | "manhua"
-  | "manhwa"
-  | "movie"
-  | "novels"
-  | "oneshots"
-  | "ova"
-  | "special"
-  | "tv"
-  | "upcoming";
+  | 'airing'
+  | 'bypopularity'
+  | 'doujin'
+  | 'favorite'
+  | 'manga'
+  | 'manhua'
+  | 'manhwa'
+  | 'movie'
+  | 'novels'
+  | 'oneshots'
+  | 'ova'
+  | 'special'
+  | 'tv'
+  | 'upcoming';
 
-export type Types = "anime" | "manga" | "people" | "characters";
+export type Types = 'anime' | 'manga' | 'people' | 'characters';

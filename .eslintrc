@@ -17,6 +17,7 @@
     "import/no-extraneous-dependencies": "off",
     "prefer-spread": 0,
     "comma-dangle": ["error", "never"],
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "import/prefer-default-export": "off"
   }
 }

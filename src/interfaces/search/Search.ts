@@ -9,7 +9,7 @@ export interface Filters {
   status?: Status;
 }
 
-type Rated = "g" | "pg" | "pg13" | "r17" | "r" | "rx";
+type Rated = 'g' | 'pg' | 'pg13' | 'r17' | 'r' | 'rx';
 
 export interface Search {
   readonly request_hash: string;
@@ -20,23 +20,23 @@ export interface Search {
 }
 
 export type SearchTypes =
-  | "anime"
-  | "character"
-  | "doujin"
-  | "manga"
-  | "manhua"
-  | "manhwa"
-  | "movie"
-  | "music"
-  | "novel"
-  | "ona"
-  | "oneshot"
-  | "ova"
-  | "person"
-  | "special"
-  | "tv";
+  | 'anime'
+  | 'character'
+  | 'doujin'
+  | 'manga'
+  | 'manhua'
+  | 'manhwa'
+  | 'movie'
+  | 'music'
+  | 'novel'
+  | 'ona'
+  | 'oneshot'
+  | 'ova'
+  | 'person'
+  | 'special'
+  | 'tv';
 
-type Status = "airing" | "completed" | "complete" | "tba" | "upcoming";
+type Status = 'airing' | 'completed' | 'complete' | 'tba' | 'upcoming';
 
 interface Result {
   readonly airing: boolean;
@@ -55,9 +55,9 @@ interface Result {
 }
 
 enum Type {
-  Movie = "Movie",
-  Ona = "ONA",
-  Ova = "OVA",
-  Special = "Special",
-  Tv = "TV"
+  Movie = 'Movie',
+  Ona = 'ONA',
+  Ova = 'OVA',
+  Special = 'Special',
+  Tv = 'TV'
 }

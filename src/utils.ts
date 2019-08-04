@@ -1,4 +1,4 @@
-import ky, { Options } from 'ky';
+import ky from 'ky';
 import PMemoize from 'p-memoize';
 import PQueue from 'p-queue';
 import { getSettings } from './settings';
@@ -10,16 +10,13 @@ const http = ky.extend({
   prefixUrl: baseUrl
 });
 
-export const api: any = PMemoize(
-  async (url: any, options: any) => await http(url, options).json(),
-  {
-    cache: getSettings().cache,
-    maxAge: 86400000 // 1 day
-  }
-);
+export const api: any = PMemoize(async (url: any, options: any) => http(url, options).json(), {
+  cache: getSettings().cache,
+  maxAge: 86400000 // 1 day
+});
 
 export const realTimeapi: any = PMemoize(
-  async (url: any, options: any) => await http(url, options).json(),
+  async (url: any, options: any) => http(url, options).json(),
   {
     cache: getSettings().cache,
     maxAge: 300000 // 5 minutes
@@ -27,7 +24,7 @@ export const realTimeapi: any = PMemoize(
 );
 
 export const searchApi: any = PMemoize(
-  async (url: any, options: any) => await http(url, options).json(),
+  async (url: any, options: any) => http(url, options).json(),
   {
     cache: getSettings().cache,
     maxAge: 86400000 // 1 day

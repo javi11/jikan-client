@@ -1,13 +1,13 @@
 export type Days =
-  | "monday"
-  | "tuesday"
-  | "wednesday"
-  | "thursday"
-  | "friday"
-  | "saturday"
-  | "sunday"
-  | "other"
-  | "unknown";
+  | 'monday'
+  | 'tuesday'
+  | 'wednesday'
+  | 'thursday'
+  | 'friday'
+  | 'saturday'
+  | 'sunday'
+  | 'other'
+  | 'unknown';
 
 export interface Schedule {
   readonly request_hash: string;
@@ -43,9 +43,9 @@ interface Genre {
 }
 
 enum GenreType {
-  Anime = "anime"
+  Anime = 'anime'
 }
 
 enum MondayType {
-  Tv = "TV"
+  Tv = 'TV'
 }

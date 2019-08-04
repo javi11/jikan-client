@@ -1,11 +1,11 @@
 export type AnimeListTypes =
-  | "all"
-  | "completed"
-  | "dropped"
-  | "onhold"
-  | "plantowatch"
-  | "ptw"
-  | "watching";
+  | 'all'
+  | 'completed'
+  | 'dropped'
+  | 'onhold'
+  | 'plantowatch'
+  | 'ptw'
+  | 'watching';
 
 export interface AnimeList {
   readonly anime: Anime[];
@@ -52,29 +52,29 @@ interface Licensor {
 }
 
 enum Priority {
-  High = "High",
-  Low = "Low",
-  Medium = "Medium"
+  High = 'High',
+  Low = 'Low',
+  Medium = 'Medium'
 }
 
 enum Rating {
-  G = "G",
-  PG13 = "PG-13",
-  R = "R",
-  RatingR = "R+"
+  G = 'G',
+  PG13 = 'PG-13',
+  R = 'R',
+  RatingR = 'R+'
 }
 
 enum SeasonName {
-  Fall = "Fall",
-  Spring = "Spring",
-  Summer = "Summer",
-  Winter = "Winter"
+  Fall = 'Fall',
+  Spring = 'Spring',
+  Summer = 'Summer',
+  Winter = 'Winter'
 }
 
 enum Type {
-  Movie = "Movie",
-  Ona = "ONA",
-  Ova = "OVA",
-  Special = "Special",
-  Tv = "TV"
+  Movie = 'Movie',
+  Ona = 'ONA',
+  Ova = 'OVA',
+  Special = 'Special',
+  Tv = 'TV'
 }

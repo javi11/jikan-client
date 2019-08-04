@@ -17,9 +17,9 @@ interface User {
 }
 
 enum Status {
-  Completed = "Completed",
-  Dropped = "Dropped",
-  OnHold = "On-Hold",
-  PlanToWatch = "Plan to Watch",
-  Watching = "Watching"
+  Completed = 'Completed',
+  Dropped = 'Dropped',
+  OnHold = 'On-Hold',
+  PlanToWatch = 'Plan to Watch',
+  Watching = 'Watching'
 }

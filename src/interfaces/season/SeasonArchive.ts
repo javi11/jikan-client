@@ -11,8 +11,8 @@ interface Archive {
 }
 
 enum Season {
-  Fall = "Fall",
-  Spring = "Spring",
-  Summer = "Summer",
-  Winter = "Winter"
+  Fall = 'Fall',
+  Spring = 'Spring',
+  Summer = 'Summer',
+  Winter = 'Winter'
 }

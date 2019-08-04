@@ -26,7 +26,7 @@ import { api, queue } from './utils';
 const byId = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}`, {}));
 
   return body as AnimeById;
 };
@@ -39,7 +39,7 @@ const byId = async (id: number) => {
 const charactersStaff = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/characters_staff`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/characters_staff`, {}));
 
   return body as CharactersStaff;
 };
@@ -54,7 +54,7 @@ const episodes = async (id: number, page: number = 1) => {
   ow(id, ow.number.positive);
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/episodes/${page}`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/episodes/${page}`, {}));
 
   return body as Episodes;
 };
@@ -67,7 +67,7 @@ const episodes = async (id: number, page: number = 1) => {
 const forum = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/forum`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/forum`, {}));
 
   return body as Forum;
 };
@@ -80,7 +80,7 @@ const forum = async (id: number) => {
 const moreInfo = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/moreinfo`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/moreinfo`, {}));
 
   return body as MoreInfo;
 };
@@ -93,7 +93,7 @@ const moreInfo = async (id: number) => {
 const news = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/news`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/news`, {}));
 
   return body as News;
 };
@@ -106,7 +106,7 @@ const news = async (id: number) => {
 const pictures = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/pictures`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/pictures`, {}));
 
   return body as Pictures;
 };
@@ -119,7 +119,7 @@ const pictures = async (id: number) => {
 const recommendations = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/recommendations`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/recommendations`, {}));
 
   return body as Recommendations;
 };
@@ -134,7 +134,7 @@ const reviews = async (id: number, page: number = 1) => {
   ow(id, ow.number.positive);
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/reviews/${page}`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/reviews/${page}`, {}));
 
   return body as Reviews;
 };
@@ -147,7 +147,7 @@ const reviews = async (id: number, page: number = 1) => {
 const stats = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/stats`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/stats`, {}));
 
   return body as Stats;
 };
@@ -162,7 +162,7 @@ const userUpdates = async (id: number, page: number = 1) => {
   ow(id, ow.number.positive);
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/userupdates/${page}`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/userupdates/${page}`, {}));
 
   return body as UserUpdates;
 };
@@ -175,7 +175,7 @@ const userUpdates = async (id: number, page: number = 1) => {
 const videos = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/anime/${id}/videos`, {}));
+  const { body } = await queue.add(async () => api(`/anime/${id}/videos`, {}));
 
   return body as Videos;
 };

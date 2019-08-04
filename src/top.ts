@@ -18,12 +18,12 @@ const items = async (type: Types = 'anime', page: number = 1, subType?: SubTypes
   ow(page, ow.number.positive);
 
   if (subType) {
-    const result = await queue.add(async () => await api(`top/${type}/${page}/${subType}`, {}));
+    const result = await queue.add(async () => api(`top/${type}/${page}/${subType}`, {}));
 
     return result.top as Result;
   }
 
-  const { top } = await queue.add(async () => await api(`top/${type}/${page}`, {}));
+  const { top } = await queue.add(async () => api(`top/${type}/${page}`, {}));
 
   return top as Result;
 };

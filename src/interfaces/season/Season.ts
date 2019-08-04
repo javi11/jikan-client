@@ -1,4 +1,4 @@
-export type Seasons = "summer" | "spring" | "fall" | "winter";
+export type Seasons = 'summer' | 'spring' | 'fall' | 'winter';
 
 export interface Season {
   readonly anime: Anime[];
@@ -37,29 +37,29 @@ interface Genre {
 }
 
 enum GenreType {
-  Anime = "anime"
+  Anime = 'anime'
 }
 
 enum Source {
-  CardGame = "Card game",
-  DigitalManga = "Digital manga",
-  Empty = "-",
-  Game = "Game",
-  LightNovel = "Light novel",
-  Manga = "Manga",
-  Novel = "Novel",
-  Original = "Original",
-  Other = "Other",
-  PictureBook = "Picture book",
-  The4KomaManga = "4-koma manga",
-  VisualNovel = "Visual novel",
-  WebManga = "Web manga"
+  CardGame = 'Card game',
+  DigitalManga = 'Digital manga',
+  Empty = '-',
+  Game = 'Game',
+  LightNovel = 'Light novel',
+  Manga = 'Manga',
+  Novel = 'Novel',
+  Original = 'Original',
+  Other = 'Other',
+  PictureBook = 'Picture book',
+  The4KomaManga = '4-koma manga',
+  VisualNovel = 'Visual novel',
+  WebManga = 'Web manga'
 }
 
 enum AnimeType {
-  Movie = "Movie",
-  Ona = "ONA",
-  Ova = "OVA",
-  Special = "Special",
-  Tv = "TV"
+  Movie = 'Movie',
+  Ona = 'ONA',
+  Ova = 'OVA',
+  Special = 'Special',
+  Tv = 'TV'
 }

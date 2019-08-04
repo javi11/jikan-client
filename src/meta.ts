@@ -21,8 +21,8 @@ const requests = async (
 ) => {
   ow(offset, ow.number.positive);
 
-  const { body } = await queue.add(
-    async () => await realTimeapi(`/meta/requests/${type}/${period}/${offset}`, {})
+  const { body } = await queue.add(async () =>
+    realTimeapi(`/meta/requests/${type}/${period}/${offset}`, {})
   );
 
   return body;
@@ -32,7 +32,7 @@ const requests = async (
  * Fetches the status of the Jikan REST API
  */
 const status = async () => {
-  const { body } = await queue.add(async () => await realTimeapi('/meta/status', {}));
+  const { body } = await queue.add(async () => realTimeapi('/meta/status', {}));
 
   return body as Status;
 };

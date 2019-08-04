@@ -1,14 +1,14 @@
-export type Periods = "today" | "weekly" | "monthly";
+export type Periods = 'today' | 'weekly' | 'monthly';
 
 export type Types =
-  | "anime"
-  | "character"
-  | "manga"
-  | "person"
-  | "season"
-  | "schedule"
-  | "search"
-  | "top";
+  | 'anime'
+  | 'character'
+  | 'manga'
+  | 'person'
+  | 'season'
+  | 'schedule'
+  | 'search'
+  | 'top';
 
 export interface Status {
   readonly cached_requests: number;

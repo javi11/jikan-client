@@ -18,7 +18,7 @@ import { api, queue } from './utils';
 const anime = async (year: number, season: Seasons) => {
   ow(year, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/season/${year}/${season}`, {}));
+  const { body } = await queue.add(async () => api(`/season/${year}/${season}`, {}));
 
   return body as Season;
 };
@@ -27,7 +27,7 @@ const anime = async (year: number, season: Seasons) => {
  * Feteches all the years & their respective seasons that can be parsed from MyAnimeList
  */
 const archive = async () => {
-  const { body } = await queue.add(async () => await api('/season/archive', {}));
+  const { body } = await queue.add(async () => api('/season/archive', {}));
 
   return body as SeasonArchive;
 };
@@ -36,7 +36,7 @@ const archive = async () => {
  * Fetches anime that have been announced for the upcoming seasons
  */
 const later = async () => {
-  const { body } = await queue.add(async () => await api('/season/later', {}));
+  const { body } = await queue.add(async () => api('/season/later', {}));
 
   return body as SeasonLater;
 };

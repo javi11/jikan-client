@@ -23,7 +23,7 @@ import { api, queue } from './utils';
 const characters = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/characters`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/characters`, {}));
 
   return body as Characters;
 };
@@ -36,7 +36,7 @@ const characters = async (id: number) => {
 const forum = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/forum`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/forum`, {}));
 
   return body as Forum;
 };
@@ -49,7 +49,7 @@ const forum = async (id: number) => {
 const moreInfo = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/moreinfo`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/moreinfo`, {}));
 
   return body as MoreInfo;
 };
@@ -62,7 +62,7 @@ const moreInfo = async (id: number) => {
 const news = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/news`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/news`, {}));
 
   return body as News;
 };
@@ -75,7 +75,7 @@ const news = async (id: number) => {
 const pictures = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/pictures`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/pictures`, {}));
 
   return body as Pictures;
 };
@@ -88,7 +88,7 @@ const pictures = async (id: number) => {
 const recommendations = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/recommendations`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/recommendations`, {}));
 
   return body as Recommendations;
 };
@@ -103,7 +103,7 @@ const reviews = async (id: number, page: number = 1) => {
   ow(id, ow.number.positive);
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/reviews/${page}`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/reviews/${page}`, {}));
 
   return body as Reviews;
 };
@@ -116,7 +116,7 @@ const reviews = async (id: number, page: number = 1) => {
 const stats = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/stats`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/stats`, {}));
 
   return body as Stats;
 };
@@ -131,7 +131,7 @@ const userUpdates = async (id: number, page: number = 1) => {
   ow(id, ow.number.positive);
   ow(page, ow.number.positive);
 
-  const { body } = await queue.add(async () => await api(`/manga/${id}/userupdates/${page}`, {}));
+  const { body } = await queue.add(async () => api(`/manga/${id}/userupdates/${page}`, {}));
 
   return body as UserUpdates;
 };
