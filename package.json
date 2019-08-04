@@ -57,10 +57,10 @@
   "name": "mal-client",
   "scripts": {
     "release": "np",
-    "lint": "eslint '*/**/*.{ts,tsx}'",
-    "prepublish": "npm run compile",
+    "lint": "eslint '*/**/*.{ts}'",
+    "prepublish": "npm run compile && npm run lint",
     "compile": "rm -rf dist && tsc --build tsconfig.json"
   },
   "types": "dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
