@@ -6,12 +6,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/javi11/mal-client.git"
+    "url": "git+https://github.com/javi11/jikan-client.git"
   },
   "bugs": {
-    "url": "https://github.com/javi11/mal-client/issues"
+    "url": "https://github.com/javi11/jikan-client/issues"
   },
-  "homepage": "https://github.com/javi11/mal-clientt#readme",
+  "homepage": "https://github.com/javi11/jikan-client#readme",
   "dependencies": {
     "debug": "4.1.1",
     "ky": "0.11.2",
@@ -54,7 +54,7 @@
     "test"
   ],
   "main": "dist/index.js",
-  "name": "mal-client",
+  "name": "jikan-client",
   "scripts": {
     "release": "np",
     "lint": "eslint '*/**/*.{ts,tsx}'",
@@ -62,5 +62,11 @@
     "compile": "rm -rf dist && tsc --build tsconfig.json"
   },
   "types": "dist/index.d.ts",
-  "version": "1.0.3"
+  "version": "1.0.3",
+  "keywords": [
+    "api",
+    "jikan",
+    "typescript",
+    "myanimelist"
+  ]
 }

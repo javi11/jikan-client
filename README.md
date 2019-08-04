@@ -13,7 +13,7 @@
 ## Install
 
 ```
-$ npm install mal-client
+$ npm install jikan-client
 ```
 
 ## Usage
