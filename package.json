@@ -1,0 +1,65 @@
+{
+  "author": {
+    "email": "javicuba11@gmail.com",
+    "name": "Javier Blanco",
+    "url": "https://github.com/javi11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javi11/mal-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/javi11/mal-client/issues"
+  },
+  "homepage": "https://github.com/javi11/mal-clientt#readme",
+  "dependencies": {
+    "debug": "4.1.1",
+    "ky": "0.11.2",
+    "p-memoize": "3.1.0",
+    "p-queue": "6.1.0",
+    "quick-lru": "4.0.1"
+  },
+  "description": "An myanimelist browser client using jikan REST API.",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "1.13.0",
+    "@typescript-eslint/parser": "1.13.0",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb-typescript": "4.0.1",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.0",
+    "lint-staged": "9.2.1",
+    "np": "5.0.3",
+    "pre-commit": "1.2.2",
+    "prettier": "1.18.2",
+    "prettier-check": "2.0.0",
+    "typescript": "3.5.3"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "license": "ISC",
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "main": "dist/index.js",
+  "name": "mal-client",
+  "scripts": {
+    "release": "np",
+    "lint": "eslint '*/**/*.{ts,tsx}' ",
+    "postinstall": "npm run compile",
+    "compile": "rm -rf dist && tsc --build tsconfig.json"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.0.0"
+}
