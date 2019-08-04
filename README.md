@@ -95,3 +95,14 @@ await Mal.User.profile("myusername");
 ## Errors
 
 Errors are propagated as https://jikan.docs.apiary.io/#introduction/json-error-response response.
+
+## Override cache
+
+To override the cache just set new settings using:
+
+```js
+import { setSettings } from 'mal-client';
+import myLRUCache from 'my-lru-cache';
+
+setSettings({ cache: new myLRUCache() })
+```
