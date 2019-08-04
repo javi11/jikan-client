@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io//test/github/javi11/mal-client/badge.svg?targetFile=package.json)](https://snyk.io//test/github/javi11/mal-client?targetFile=package.json)
+
 > A wrapper for the jikan REST API for browsers inspired on https://github.com/Julien-Broyard/jikants
 
 - API version v3.3
