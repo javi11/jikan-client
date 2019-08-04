@@ -175,12 +175,7 @@ const userUpdates = async (id: number, page: number = 1) => {
 const videos = async (id: number) => {
   ow(id, ow.number.positive);
 
-  const { body } = await queue.add(
-    async () =>
-      await api(`/anime/${id}/videos`, {})
-        .json()
-        .json()
-  );
+  const { body } = await queue.add(async () => await api(`/anime/${id}/videos`, {}));
 
   return body as Videos;
 };

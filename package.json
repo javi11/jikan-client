@@ -15,6 +15,7 @@
   "dependencies": {
     "debug": "4.1.1",
     "ky": "0.11.2",
+    "ow": "0.13.2",
     "p-memoize": "3.1.0",
     "p-queue": "6.1.0",
     "quick-lru": "4.0.1"

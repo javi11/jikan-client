@@ -11,6 +11,7 @@ import { api, queue } from './utils';
  * Fetches anime by the specified Producer/Studio/Licensor
  *
  * @param id - The producer id
+ * @param page - The page number
  */
 const get = async (id: number, page: number = 1) => {
   ow(id, ow.number.positive);
