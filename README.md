@@ -19,7 +19,7 @@ $ npm install jikan-client
 ## Usage
 
 ```js
-import * as Mal from 'mal-client';
+import * as Mal from 'jikan-client';
 
 /* ANIME */
 await Mal.Anime.byId(1);
@@ -101,7 +101,7 @@ Errors are propagated as https://jikan.docs.apiary.io/#introduction/json-error-r
 To override the cache just set new settings using:
 
 ```js
-import { setSettings } from 'mal-client';
+import { setSettings } from 'jikan-client';
 import myLRUCache from 'my-lru-cache';
 
 setSettings({ cache: new myLRUCache() })
